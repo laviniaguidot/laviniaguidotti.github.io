@@ -1,0 +1,79 @@
+
+
+	.margin-section{
+	margin-top:60px;
+
+	}
+		
+
+	.container-title {	
+	background-color: white;  
+	height: 20vh; 
+	color: #282221;
+	}
+
+
+
+	.emptyline{
+	background-color:white;
+	height:5vh;
+	}
+	
+	.captainmosfet{
+	max-width: 290px;
+	}
+
+
+	.icon{
+	max-width: 266px;
+	}
+
+	
+
+	.menu{
+	background-color: white
+	}
+	
+
+	.button-menu{
+	max-width:150px;
+	
+	}
+
+
+
+	.container-body{
+	background-color: white; 
+	}
+
+	.container-content {
+	background-color:white; 
+	
+	}
+	.container-footer{
+	background-color: black;
+	color:white;
+	height:20vh;
+	}	
+
+	
+		
+
+
+		
+	a:link {
+	color: gray;
+	text-decoration: none; 
+	}
+	a:visited {
+	color:white; 
+	text-decoration: none;
+	}
+	a:hover {
+	text-decoration: underline ;
+	color: gray;
+	}
+	
+
+
+
