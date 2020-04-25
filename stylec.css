@@ -10,6 +10,7 @@
 	background-color: white;  
 	height: 20vh; 
 	color: #282221;
+	display: -webkit-flex;
 	}
 
 
