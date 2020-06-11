@@ -1,72 +1,64 @@
 $(document).ready(function () {
     
 
+TweenLite.set(".pageBg", {xPercent: -50, yPercent: -50});
+TweenLite.set(".pageWrapper", {left: "50%", perspective: 1000 });
+TweenLite.set(".page", {transformStyle: "preserve-3d"});
+TweenLite.set(".back", {rotationY: -180});
+TweenLite.set([".back", ".front"], {backfaceVisibility: "hidden"});
+
+
+$(".page").click(
+	function() {
+		if (pageLocation[this.id] === undefined || pageLocation[this.id] == "right") {
+			zi = ($(".left").length) + 1;
+			TweenMax.to($(this), 1, {force3D: true, rotationY: -180, transformOrigin: "-1px top", className: '+=left', z: zi, zIndex: zi});
+			TweenLite.set($(this), {className: '-=right'});
+			pageLocation[this.id] = "left";
+		} else {
+			zi = ($(".right").length) + 1;
+			TweenMax.to($(this), 1, {force3D: true, rotationY: 0, transformOrigin: "left top", className: '+=right', z: zi, zIndex: zi
+			});
+			TweenLite.set($(this), {className: '-=left'});
+			pageLocation[this.id] = "right";
+		}
+	}
+);
+
+$(".front").hover(
+	function() {
+		TweenLite.to($(this).find(".pageFoldRight"), 0.3, {width: "50px", height: "50px", backgroundImage: "linear-gradient(45deg,  #fefefe 0%,#f2f2f2 49%,#ffffff 50%,#ffffff 100%)"});
+	},
+	function() {
+		TweenLite.to($(this).find(".pageFoldRight"), 0.3, {width: "0px", height: "0px"});
+	}
+);
+
+$(".back").hover(
+	function() {
+		TweenLite.to($(this).find(".pageFoldLeft"), 0.3, {width: "50px", height: "50px", backgroundImage: "linear-gradient(135deg,  #ffffff 0%,#ffffff 50%,#f2f2f2 51%,#fefefe 100%)"		});
+	},
+	function() {
+		TweenLite.to($(this).find(".pageFoldLeft"), 0.3, {width: "0px", height: "0px"});
+	}
+)
+
+var pageLocation = [],
+	lastPage = null;
+	zi = 0;
+
 
     $("#next").click(function () {
-        $("#book").turn("next");
+        if ($(".page.right").length > 0) {
+              $(".page.right").trigger("click");
+        } else {
+           $(".pageWrapper .page:last-child").trigger("click");
+        }
+     
     })
 
      $("#prev").click(function () {
-        $("#book").turn("previous");
+      $(".page.left").trigger("click");
     })
 
-
-	    'use strict';
-
-    var module = {
-        ratio: 1.78,
-        init: function (id) {
-            var me = this;
-
-            // if older browser then don't run javascript
-            if (document.addEventListener) {
-                this.el = document.getElementById(id);
-                this.resize();
-                this.plugins();
-
-                // on window resize, update the plugin size
-                window.addEventListener('resize', function (e) {
-                    var size = me.resize();
-                    $(me.el).turn('size', size.width, size.height);
-                });
-            }
-        },
-        resize: function () {
-            // reset the width and height to the css defaults
-            this.el.style.width = '';
-            this.el.style.height = '';
-
-            var width = this.el.clientWidth,
-                height = Math.round(width / this.ratio),
-                padded = Math.round(document.body.clientHeight * 0.9);
-
-            // if the height is too big for the window, constrain it
-            if (height > padded) {
-                height = padded;
-                width = Math.round(height * this.ratio);
-            }
-
-            // set the width and height matching the aspect ratio
-            this.el.style.width = width + 'px';
-            this.el.style.height = height + 'px';
-
-            return {
-                width: width,
-                height: height
-            };
-        },
-        plugins: function () {
-            // run the plugin
-            $(this.el).turn({
-                gradients: true,
-                acceleration: true
-            });
-            // hide the body overflow
-            document.body.className = 'hide-overflow';
-        }
-    };
-
-    module.init('book');
-	
-  // js goes in here.
 });
