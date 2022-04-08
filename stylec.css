@@ -1,43 +1,51 @@
 
 
+	/*classes for top*/
+	
 	.margin-section{
 	margin-top:60px;
 
 	}
 	
-		
-
 	.container-title {	
 	background-color: white;  
 	height: 25vh; 
 	color: #282221;
 	}
-
-
-
-
-	
-	.captainmosfet{
-	max-width: 290px;
+ 
+	.titleimg{
+	max-width: 100%;
 	}
 
+	.captainmosfet{
+	max-width: 93%;
+	}
 
 	.icon{
-	max-width: 266px;
+	max-width: 70%;
 	cursor:pointer;
 	}
 
 	.container-fluid{
 		    position: relative;
 	}
+/*menu classes*/
 
+	.column-body{
+	max-height: 80%;	
+	}
 	.menu{
 	background-color: white
 	}
 	
+	.container-menu{
+		background-color: #f8f8f8; 
+		position: relative;
+		height: 25vh; 
+		}
 
 	.button-menu{
-	max-width:150px;
+	max-width:40%;
 	
 	}
 
@@ -47,7 +55,9 @@
 		
 		}
 
-
+	.book-container{
+		background-color: #f8f8f8;
+	}
 
 	.container-body{
 	background-color: white; 
@@ -71,11 +81,7 @@
 	height:15vh;
 	 
 	}	
-
-
-
-
-		
+	
 	a:link {
 	color: black;
 	text-decoration: none; 
