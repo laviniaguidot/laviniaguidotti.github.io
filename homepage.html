@@ -5,55 +5,49 @@
 		integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 	<link rel="stylesheet" href="stylec.css">
 
-	<head>
+<head>
 		<script src="https://code.jquery.com/jquery-3.5.0.min.js"
 			integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
 		<script src="./flip.js"></script>
 		<link rel="icon" href="ICON.png">
-	</head>
-
-
-	<body >
-		<div class="container  container-title  d-flex">
-
-
-			<div class="row  aling-items-center">
-
+</head>
+<!---body structure : how do I want ths body to be structured? 
+	col is container
+	row is container title. Split in cols
+	row is container bodz then split in cols                                          --->  
+<body>
+		
+			<div class="row   container-title aling-items-center">
 
 				<div class="col-4">
 					<img src="captainMosfet.jpg" alt="responsive-image" class="img-fluid captainmosfet" />
 				</div>
+
 				<div class="col-4 align-items-center title-img text-center">
-					<img src="titlenew.png" alt="responsive-image" class="img-fluid " />
+					<img src="titlenew.png" alt="responsive-image" class="img-fluid" />
 				</div>
 
 				<div class="col-4 text-right">
 					<div class="row justify-content-left">
-						<a href="https://twitter.com/CaptainMosfet">
-							<img src="emptyresistor.png" alt="responsive-image" class="mx-auto d-block icon img-fluid" />
-						</a>
+						<img src="emptyresistor.png" alt="responsive-image" class="mx-auto d-block icon img-fluid" />
 					</div>
 
 					<div class="row justify-content-left">
-						<a href="https://twitter.com/CaptainMosfet">
-							<img src="fbresistor.png" alt="responsive-image" class="mx-auto d-block icon img-fluid" />
-						</a>
-						</div>
+						<img src="fbresistor.png" alt="responsive-image" class="mx-auto d-block icon img-fluid" />
+					</div>
 
 					<div class="row justify-content-left">
-						<a href="https://twitter.com/CaptainMosfet">
-							<img src="twresistor.png" alt="responsive-image" class="mx-auto d-block icon img-fluid" />
-						</a>
+						<img src="twresistor.png" alt="responsive-image" class="mx-auto d-block icon img-fluid" />
 					</div>
 				</div>
 
 			</div>
-		</div>
-		<div class="container-body">
+		
+			<div class="row container-body margin-section">
 
-			<div class="row">
-				<div class="col-4">
+			
+				<div class="col-4 text-center">
 					<a href="homepage.html">
 						<img src="home2.png" class="img-fluid button-menu">
 					</a>
@@ -63,14 +57,15 @@
 					<a href="archivepage.html">
 						<img src="archive.png" class="img-fluid button-menu">
 					</a></div>
-				<div class="col-4 text-right">
+				<div class="col-4 text-centert">
 					<a href="videospage.html">
 						<img src="video.png" class="img-fluid button-menu">
 					</a>
-				</div>
 			</div>
+			
 		</div>
-		<div class="book-container margin-section">
+		
+		<div class="container margin-section">
 		
 			<div class="bookWrapper">
 
@@ -113,80 +108,38 @@
 				</div>
 			</div>
 		</div>
-
-
-
-		<!-- 
-		<div class="container-fluid container-story d-flex ">
-		<div class="container container-controllore ">
-		<div class="t rel">
-			<div class="row ">
-				<div class="col-12">
-					<img src="controllore2.png" class="img-fluid controllore">
-				</div>	
-			
-			
-				<div class="tc abs">
-					<div class="book abs1" id="book">
-						<div class="page"><img src="./img/COOMINGSOON.png"
-							alt="" /></div>
-						<div class="page"><img src="./img/COOMINGSOON.png"
-							alt="" /></div>
-						<div class="page"><img src="./img/COOMINGSOON.png"
-							alt="" /></div>
-						<div class="page"><img src="./img/COOMINGSOON.png"
-							alt="" /></div>
-						<div class="page"><img src="./img/COOMINGSOON.png"
-							alt="" /></div>
-					
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container container-next margin-section">
-			<div class="row align-items-center justify-content-center">
-				<div class="col-6  text-right">
-					<img id="prev" src="prev.png" class=" img-fluid icon">
-				</div>
-				<div class="col-6 text-left">
-					<img  id="next" src="next.png" class=" img-fluid icon">
-				</div>
-				
-			</div>
-		</div>
-		</div>
-
 		
-		</div>
-	 -->
 
-
-
+<!---Footer structure--->  
 
 </body>
+
+
 <footer> 
-			<div class="container-footer">
-				
+			<div class="container-footer container-lg fixed-bottom">
 				<div class="row align-items-center justify-content-center">
-					<div class="col">
+					<div class="col-3 text-center">
 						<a href="homepage.html"> HOME</a>
 					</div>
 
-					<div class="col">
+					<div class="col-3 text-center">
 						<a href="archivepage.html"> ARCHIVE </a>
 					</div>
 
-					<div class="col">
+					<div class="col-3 text-center">
 						<a href="videospage.html"> VIDEO </a>
 					</div>
 
-					<div class="col">
+					<div class="col-3 text-center">
 						<a href="contactspage.html"> CONTACTS </a>
 					</div>
 				</div>
 			</div>
 		
-</footer>
-	
+</footer>	
+
+
+
+
 
 </html>
