@@ -6,7 +6,7 @@
 	
 	.container-title {	
 	background-color: white;  
-	height: 20%; 
+	height: 10%; 
 	color: #282221;
 	}
  
@@ -64,6 +64,7 @@
 	background-color: white; 
 	position:relative;
 	height: 10%; 
+	margin: auto;
 	
 	
 	}
@@ -92,7 +93,7 @@
 	}	
 	
 	a:link {
-	color: black;
+	color: white;
 	text-decoration: none; 
 	}
 	a:visited {
