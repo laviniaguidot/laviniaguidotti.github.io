@@ -2,14 +2,11 @@
 
 	/*classes for top*/
 	
-	.margin-section{
-	margin-top:60px;
-
-	}
+	
 	
 	.container-title {	
 	background-color: white;  
-	height: 25vh; 
+	height: 20%; 
 	color: #282221;
 	}
  
@@ -60,15 +57,22 @@
 
 	.book-container{
 		background-color: #f8f8f8;
-		position:relative;
+		
 	}
 
 	.container-body{
 	background-color: white; 
+	position:relative;
+	height: 10%; 
+	
+	
 	}
 
 	.container-content {
 	background-color:white; 
+	height: 65%;
+	min-height: 65%; 
+	width: 100%;
 	
 	}
 
@@ -82,7 +86,8 @@
 	.container-footer{
 	background-color: black;
 	color:white;
-	height:15vh;
+	height:5%;
+	width: 100%;
 	 
 	}	
 	
